@@ -20,7 +20,7 @@ COV.start()
 app = create_app()
 cli = FlaskGroup(create_app=create_app)
 #cli = FlaskGroup(app)
-
+db.create_all()
 
 @cli.command()
 def recreate_db():
